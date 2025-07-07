@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TestOps Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Resumo dos Testes</h1>
+    <canvas id="resultsChart" width="400" height="400"></canvas>
+    <script>
+        const data = {{ data | tojson }};
+        const ctx = document.getElementById('resultsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Passaram', 'Falharam', 'Erros', 'Ignorados'],
+                datasets: [{
+                    data: [data.passed, data.failures, data.errors, data.skipped],
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
