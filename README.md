@@ -1,4 +1,4 @@
-![CI](https://github.com/zmovirzynski/testops-dashboard/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/zmovirzynski/TestOps/actions/workflows/ci.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 
 
